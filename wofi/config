@@ -13,3 +13,5 @@ term=kitty
 matching=contains
 allow_images=true
 hide_scroll=true
+
+change-theme = ~/.config/wofi/scripts/change-theme-wofi.sh
