@@ -1,17 +1,26 @@
 #!/bin/zsh
 
 packages=(
-  hypr
   kitty
   neofetch
   nvim
   wal
+  yay
+  sway
+  wlroots
+  wmenu
+  i3status
+  emacs
+)
+
+packages_unused=(
+  awesome
+  rofi
+  hypr
   waybar
   wlogout
   wofi
-  yay
-  awesome
-  rofi
+  helix
 )
 
 for element in "${packages[@]}"
@@ -27,4 +36,12 @@ do
   else
     echo "No se encontró $element ni en .config ni en dotfiles"
   fi
+done
+
+for element in "${packages_unused[@]}"
+do
+   if [ -d "/home/$USER/.config/$element" ]; then
+    rm -rf "/home/$USER/.config/$element"
+    echo "Eliminado $element de .config porque ya no se usa"
+   fi
 done

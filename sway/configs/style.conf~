@@ -1,0 +1,13 @@
+############################################
+##########     SET BACKGROUND     ##########
+############################################
+
+include ../active-bg.conf
+#output * bg /home/adri/Pictures/wallpapers/sunset-mountain-minimalist.jpg fill
+output * bg $active-background fill
+
+
+default_border none 
+for_window [title="^.*"] title_format ""
+default_border normal 0
+default_floating_border normal 0

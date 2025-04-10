@@ -3,7 +3,7 @@
   "gtk-layer-shell": true,
   "modules-left": ["hyprland/workspaces", "custom/spotify"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock", "custom/menu"],
+  "modules-right": ["tray", "network", "pulseaudio", "battery", "clock", "custom/menu"],
   "hyprland/window": {
     "max-length": 25
   },
@@ -43,12 +43,18 @@
     },
     "on-click": "pavucontrol"
   },
+  "tray": {
+    //"icon-size": 21,
+    "spacing": 10
+  },
   "network": {
     "interval": 5,
-    "format-wifi": "    {essid} ({signalStrength}%)", // Icon: wifi
+    //"format-wifi": "    {essid} ({signalStrength}%)", // Icon: wifi
+    "format-wifi": "{essid}",// Icon: wifi
+
     "format-ethernet": "    {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-    "format-disconnected": "⚠    Disconnected",
-    "tooltip-format": "{ifname}: {ipaddr}"
+    //"format-disconnected": "⚠    Disconnected",
+    "tooltip-format": "{ipaddr}"
   },
   "custom/menu": {
     "format": "<span>☰</span>",
